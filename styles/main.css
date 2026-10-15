@@ -54,6 +54,96 @@
   height: auto;
 }
 
+.events-section {
+  padding-block: 1.5rem 2.5rem;
+}
+
+.events-section__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.events-section__heading {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.events-section__heading h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.events-section__location {
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  background-color: rgba(0, 121, 138, 0.12);
+  color: var(--color-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.events-section__link {
+  color: var(--color-primary);
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.events-section__link:hover {
+  text-decoration: underline;
+}
+
+.events-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+@media (max-width: 900px) {
+  .events-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .events-section__header {
+    align-items: center;
+  }
+
+  .events-section__heading {
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    min-width: 0;
+  }
+
+  .events-section__heading h2 {
+    flex-shrink: 0;
+    font-size: 1.25rem;
+  }
+
+  .events-section__location {
+    min-width: 0;
+    padding: 0.5rem;
+    font-size: 0.875rem;
+    white-space: nowrap;
+  }
+
+  .events-section__link {
+    display: none;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
 @media (max-width: 767px) {
   .hero__container {
     grid-template-columns: 1fr;
@@ -74,5 +164,34 @@
 @media (prefers-reduced-motion: reduce) {
   .hero__button {
     transition: none;
+  }
+}
+
+/* Show more events — mobile only */
+
+.events-section__more {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .events-grid:not(.events-grid--expanded) .event-card:nth-child(n + 6) {
+    display: none;
+  }
+
+  .events-section__more:not([hidden]) {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    border: 1px solid rgba(0, 121, 138, 0.25);
+    border-radius: 8px;
+    background-color: rgba(0, 121, 138, 0.08);
+    color: var(--color-primary);
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .events-section__more:hover {
+    background-color: rgba(0, 121, 138, 0.14);
   }
 }
