@@ -3,11 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Main Page</title>
+
+    <title>Meetup | Find your people</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/main.css" />
   </head>
+
   <body>
-    <!-- <a href="/filterPage.html">Go to filter page</a> -->
-    <button>go to filter page</button>
+    <header class="site-header">
+      <div class="header-container">
+        <div class="header-left">
+          <a class="site-logo" href="./main.html" aria-label="Meetup home">
+            <img
+              src="./assets/icons/meetup-logo.svg"
+              alt="Meetup"
+              width="94"
+              height="34"
+            />
+          </a>
+
+          <div
+            class="header-search"
+            role="search"
+            aria-label="Event search preview"
+          >
+            <div class="search-field">
+              <img
+                src="./assets/icons/search.svg"
+                alt=""
+                width="22"
+                height="22"
+              />
+              <span>Search events</span>
+            </div>
+
+            <div class="location-field">
+              <span>Mountain View, CA</span>
+            </div>
+
+            <div class="search-button" aria-hidden="true">
+              <img
+                src="./assets/icons/search-white.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+            </div>
+          </div>
+        </div>
+
+        <nav class="header-nav" aria-label="Account navigation">
+          <span class="language-selector">
+            <img src="./assets/icons/globe.svg" alt="" width="20" height="20" />
+            English
+          </span>
+
+          <span class="login-link">Log in</span>
+          <span class="signup-link">Sign up</span>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero__container">
+          <div class="hero__content">
+            <h1 id="hero-title">
+              The people platform—Where interests become friendships
+            </h1>
+
+            <p>
+              Whatever your interest, from hiking and reading to networking and
+              skill sharing, there are thousands of people who share it on
+              Meetup. Events are happening every day—sign up to join the fun.
+            </p>
+
+            <a class="hero__button" href="./filterPage.html"> Join Meetup </a>
+          </div>
+
+          <div class="hero__visual">
+            <img
+              src="./assets/images/hero-illustration.png"
+              alt="People connecting at a Meetup event"
+              width="379"
+              height="269"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"></footer>
   </body>
-  <script src="scripts/script.js"></script>
 </html>

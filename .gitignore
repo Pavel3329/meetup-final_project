@@ -1,13 +1,24 @@
-# Editor / IDE
+
+# Editors / IDE
 .vscode/
 .idea/
 
-# OS
+# Operating systems
 .DS_Store
 Thumbs.db
+Desktop.ini
 
 # Logs
 *.log
+npm-debug.log*
 
-# Node
+# Dependencies
 node_modules/
+
+# Environment variables
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.bak
