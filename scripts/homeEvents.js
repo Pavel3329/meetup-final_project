@@ -26,6 +26,7 @@ const homeEvents = [
     dateTime: "2024-03-13T18:00:00-07:00",
     attendees: 40,
     image: "./assets/images/tech-talks.png",
+    isOnline: true,
   },
   {
     title: "INFORMS San Francisco Chapter In-Person Event",
@@ -50,6 +51,7 @@ const homeEvents = [
     dateTime: "2024-03-21T18:00:00-07:00",
     attendees: 51,
     image: "./assets/images/ros-by-the-bay.png",
+    isOnline: true,
   },
   {
     title: "Free Christian Singles' Dinner",
@@ -69,20 +71,71 @@ const homeEvents = [
   },
 ];
 
+const onlineEvents = [
+  {
+    title: "Amazing On-Demand 15 Min Interviews with Top Coaches and Speakers",
+    category: "Business (25 km)",
+    date: "Thu, Mar 14 · 6:00 PM PDT",
+    dateTime: "2024-03-14T18:00:00-07:00",
+    attendees: 3,
+    image: "./assets/images/online-interviews.png",
+    isOnline: true,
+  },
+  {
+    title: "Vision Pro Developers Online Meetup",
+    category: "Technology",
+    date: "Wed, Mar 13 · 7:00 PM PDT",
+    dateTime: "2024-03-13T19:00:00-07:00",
+    attendees: 51,
+    image: "./assets/images/vision-pro.png",
+    isOnline: true,
+  },
+  {
+    title: "Significant Musical Moments",
+    category: "Hobbies and Passions (10 km)",
+    date: "Wed, Mar 13 · 6:00 PM PDT",
+    dateTime: "2024-03-13T18:00:00-07:00",
+    attendees: 16,
+    image: "./assets/images/musical-moments.png",
+    isOnline: true,
+  },
+  {
+    title: "FREE Webinar : Introduction to Power BI",
+    category: "Technology",
+    date: "Thu, Mar 14 · 5:30 PM PDT",
+    dateTime: "2024-03-14T17:30:00-07:00",
+    attendees: 33,
+    image: "./assets/images/power-bi.png",
+    isOnline: true,
+  },
+];
+
 // Generate HTML for a single event card
 function createEventCard(event) {
   return `
-    <article class="event-card">
-      <img
-        class="event-card__image"
-        src="${event.image}"
-        alt="${event.title}"
-        width="272"
-        height="153"
-        loading="lazy"
-      >
-
-      <div class="event-card__content">
+  <article class="event-card">
+    <div class="event-card__visual">
+      <img class="event-card__image" src="${event.image}" alt="${event.title}" width="272" height="153" loading="lazy">
+      ${
+        event.isOnline
+          ? `
+  <span class="event-card__badge">
+    <svg
+  width="16"
+  height="16"
+  viewBox="0 0 24 24"
+  fill="currentColor"
+  aria-hidden="true"
+>
+  <path d="M15 8.5V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h9a2 2 0 0 0 2-2v-1.5l6 3.5V5l-6 3.5Z"/>
+</svg>
+    Online Event
+  </span>
+`
+          : ""
+      }
+    </div>
+    <div class="event-card__content">
         <h3 class="event-card__title">
           ${event.title}
         </h3>
@@ -160,3 +213,13 @@ function renderHomeEvents() {
 }
 
 renderHomeEvents();
+
+function renderOnlineEvents() {
+  const container = document.querySelector("#online-events");
+
+  if (!container) return;
+
+  container.innerHTML = onlineEvents.map(createEventCard).join("");
+}
+
+renderOnlineEvents();

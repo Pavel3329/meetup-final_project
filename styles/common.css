@@ -66,6 +66,7 @@ select {
   align-items: center;
   gap: 2.5rem;
   min-width: 0;
+  margin-left: max(0px, calc((100vw - 1512px) / 2));
 }
 
 .site-logo {
