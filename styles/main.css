@@ -121,7 +121,7 @@
   display: none;
 }
 
-/* Join Meetup */
+/* Блок приглашения присоединиться к Meetup */
 
 .join-section {
   padding-block: 3.5rem;
@@ -194,7 +194,7 @@
   height: auto;
 }
 
-/* Explore top categories */
+/* Раздел категорий мероприятий */
 
 .categories-section {
   padding-bottom: 4rem;
@@ -249,7 +249,7 @@
   color: #212121;
 }
 
-/* Popular cities on Meetup */
+/* Популярные города */
 
 .cities-section {
   padding-bottom: 4rem;
@@ -309,7 +309,7 @@
   color: #212121;
 }
 
-/* How Meetup works */
+/* Информация о работе Meetup */
 
 .how-section {
   padding-bottom: 4rem;
@@ -378,7 +378,7 @@
   text-decoration: none;
 }
 
-/* Friendships are made on Meetup */
+/* Статьи о знакомствах и общении */
 
 .friendships-section {
   padding-bottom: 4rem;
@@ -455,7 +455,7 @@
   text-decoration: none;
 }
 
-/* Footer */
+/* Подвал сайта */
 
 .site-footer {
   background-color: #212121;
@@ -605,7 +605,7 @@
   text-align: center;
 }
 
-/* Responsive layout — consolidated by breakpoint */
+/* Адаптивные стили сгруппированы по ширине экрана */
 
 @media (max-width: 900px) {
   .events-grid {

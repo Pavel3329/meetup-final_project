@@ -63,7 +63,7 @@
   height: 20px;
 }
 
-/* Horizontal event card */
+/* Горизонтальная карточка для списка мероприятий */
 .event-card--horizontal {
   display: grid;
   grid-template-columns: 96px minmax(0, 1fr);
@@ -165,7 +165,7 @@
   }
 }
 
-/* Horizontal cards on the mobile homepage */
+/* На мобильных экранах карточки главной страницы становятся горизонтальными */
 @media (max-width: 600px) {
   .events-grid .event-card {
     display: grid;

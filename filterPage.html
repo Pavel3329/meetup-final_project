@@ -3,9 +3,245 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Filter Page</title>
+    <title>Events near New York, NY | Meetup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/common.css" />
+    <link rel="stylesheet" href="styles/event-card.css" />
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/filter.css" />
   </head>
   <body>
-    <a href="/main.html">Go to main page</a>
+    <header class="site-header">
+      <div class="header-container">
+        <div class="header-left">
+          <a class="site-logo" href="./main.html" aria-label="Meetup home">
+            <img
+              src="./assets/icons/meetup-logo.svg"
+              alt="Meetup"
+              width="94"
+              height="34"
+            />
+          </a>
+
+          <div
+            class="header-search"
+            role="search"
+            aria-label="Event search preview"
+          >
+            <div class="search-field">
+              <img
+                src="./assets/icons/search.svg"
+                alt=""
+                width="22"
+                height="22"
+              />
+              <span>Search events</span>
+            </div>
+
+            <div class="location-field">
+              <span>Mountain View, CA</span>
+            </div>
+
+            <div class="search-button" aria-hidden="true">
+              <img
+                src="./assets/icons/search-white.svg"
+                alt=""
+                width="20"
+                height="20"
+              />
+            </div>
+          </div>
+        </div>
+
+        <nav class="header-nav" aria-label="Account navigation">
+          <span class="language-selector">
+            <img src="./assets/icons/globe.svg" alt="" width="20" height="20" />
+            English
+          </span>
+
+          <span class="login-link">Log in</span>
+          <span class="signup-link">Sign up</span>
+        </nav>
+      </div>
+    </header>
+    <main class="filter-page">
+      <div class="filter-page__layout">
+        <section class="filter-page__results" aria-labelledby="filter-heading">
+          <h1 id="filter-heading">Events near New York, NY</h1>
+          <div class="filter-page__tab">Events</div>
+          <form
+            class="filter-controls"
+            id="filter-form"
+            aria-label="Filter events"
+          >
+            <label class="filter-controls__item">
+              <span class="visually-hidden">Event type</span>
+              <select id="type-filter" aria-label="Event type">
+                <option value="">Any type</option>
+                <option value="online">Online</option>
+                <option value="offline">Offline</option>
+              </select>
+            </label>
+            <label class="filter-controls__item">
+              <span class="visually-hidden">Maximum distance</span>
+              <select id="distance-filter" aria-label="Maximum distance">
+                <option value="">Any distance</option>
+                <option value="5">5 km</option>
+                <option value="10">10 km</option>
+                <option value="15">15 km</option>
+                <option value="25">25 km</option>
+                <option value="50">50 km</option>
+                <option value="75">75 km</option>
+                <option value="100">100 km</option>
+              </select>
+            </label>
+            <label class="filter-controls__item">
+              <span class="visually-hidden">Category</span>
+              <select id="category-filter" aria-label="Category">
+                <option value="">Any category</option>
+                <option>Social Activities</option>
+                <option>Hobbies and Passions</option>
+                <option>Health and Wellbeing</option>
+                <option>Business</option>
+                <option>Technology</option>
+              </select>
+            </label>
+            <label class="filter-controls__item">
+              <span class="visually-hidden">Day</span>
+              <select id="day-filter" aria-label="Day">
+                <option value="">Any day</option>
+              </select>
+            </label>
+          </form>
+          <div class="filter-page__status">
+            <p id="results-count" role="status" aria-live="polite"></p>
+            <button id="reset-filters" type="button">Clear filters</button>
+          </div>
+          <div
+            id="filtered-events"
+            class="filter-page__cards"
+            aria-live="polite"
+          ></div>
+          <p id="empty-message" class="filter-page__empty" hidden>
+            No events match your filters. Try changing or clearing them.
+          </p>
+        </section>
+        <aside class="filter-page__map" aria-label="Map of New York events">
+          <p>Find events near</p>
+          <h2>New York, NY</h2>
+          <div class="filter-page__map-preview">
+            <img
+              src="./assets/images/events-map.png"
+              alt="Map preview of New York"
+            />
+          </div>
+        </aside>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="site-footer__container">
+        <div class="site-footer__top">
+          <span>Create your own Meetup group.</span>
+          <a class="site-footer__start" href="https://www.meetup.com/start/">
+            Get Started
+          </a>
+        </div>
+
+        <div class="site-footer__navigation">
+          <nav class="site-footer__column" aria-label="Your Account">
+            <h2>Your Account</h2>
+            <a href="https://www.meetup.com/register/">Sign up</a>
+            <a href="https://www.meetup.com/login/">Log in</a>
+            <a href="https://help.meetup.com/">Help</a>
+            <a href="https://www.meetup.com/">Become an Affiliate</a>
+          </nav>
+
+          <nav class="site-footer__column" aria-label="Discover">
+            <h2>Discover</h2>
+            <a href="./filterPage.html">Groups</a>
+            <a href="./filterPage.html">Calendar</a>
+            <a href="./filterPage.html">Topics</a>
+            <a href="./filterPage.html">Cities</a>
+            <a href="./filterPage.html">Online Events</a>
+            <a href="./filterPage.html">Local Guides</a>
+            <a href="./filterPage.html">Make Friends</a>
+          </nav>
+
+          <nav class="site-footer__column" aria-label="Meetup">
+            <h2>Meetup</h2>
+            <a href="https://www.meetup.com/about/">About</a>
+            <a href="https://www.meetup.com/blog/">Blog</a>
+            <a href="https://www.meetup.com/pro/">Meetup Pro</a>
+            <a href="https://www.meetup.com/">Careers</a>
+            <a href="https://www.meetup.com/apps/">Apps</a>
+            <a href="https://www.meetup.com/">Podcast</a>
+          </nav>
+        </div>
+
+        <div class="site-footer__social-row">
+          <div class="site-footer__social">
+            <h2>Follow us</h2>
+
+            <div class="site-footer__social-links">
+              <a href="https://www.facebook.com/Meetup/" aria-label="Facebook">
+                <img src="./assets/icons/facebook.svg" alt="" />
+              </a>
+              <a href="https://twitter.com/Meetup" aria-label="Twitter">
+                <img src="./assets/icons/twitter.svg" alt="" />
+              </a>
+              <a
+                href="https://www.youtube.com/user/meetup"
+                aria-label="YouTube"
+              >
+                <img src="./assets/icons/youtube.svg" alt="" />
+              </a>
+              <a
+                href="https://www.instagram.com/meetup/"
+                aria-label="Instagram"
+              >
+                <img src="./assets/icons/instagram.svg" alt="" />
+              </a>
+              <a href="https://www.tiktok.com/@meetup" aria-label="TikTok">
+                <img src="./assets/icons/tiktok.svg" alt="" />
+              </a>
+            </div>
+          </div>
+
+          <div class="site-footer__apps">
+            <a href="https://play.google.com/store/apps/details?id=com.meetup">
+              <img
+                src="./assets/icons/google-play.svg"
+                alt="Get it on Google Play"
+              />
+            </a>
+            <a href="https://apps.apple.com/app/meetup/id375990038">
+              <img
+                src="./assets/icons/app-store.svg"
+                alt="Download on the App Store"
+              />
+            </a>
+          </div>
+        </div>
+
+        <div class="site-footer__bottom">
+          <a href="https://www.meetup.com/terms/">Terms of Service</a>
+          <a href="https://www.meetup.com/privacy/">Privacy Policy</a>
+          <a href="https://www.meetup.com/privacy/">
+            Do Not Sell or Share My Personal Data
+          </a>
+          <a href="https://www.meetup.com/cookie_policy/">Cookie Policy</a>
+          <a class="site-footer__help" href="https://help.meetup.com/">Help</a>
+        </div>
+
+        <div class="site-footer__copyright">© 2026 Meetup</div>
+      </div>
+    </footer>
+    <script src="scripts/eventsData.js"></script>
+    <script src="scripts/filter.js"></script>
   </body>
 </html>

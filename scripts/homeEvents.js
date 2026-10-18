@@ -1,6 +1,6 @@
 "use strict";
 
-// Events displayed on the homepage
+// Данные карточек главной страницы
 const homeEvents = [
   {
     title: "Day Trading Idea and Strategy",
@@ -110,7 +110,7 @@ const onlineEvents = [
   },
 ];
 
-// Generate HTML for a single event card
+// Создание HTML карточки мероприятия
 function createEventCard(event) {
   return `
   <article class="event-card">
@@ -182,7 +182,7 @@ function createEventCard(event) {
   `;
 }
 
-// Render all homepage events
+// Вывод карточек мероприятий на главной странице
 function renderHomeEvents() {
   const container = document.querySelector("#home-events");
   const moreButton = document.querySelector("#home-events-more");
