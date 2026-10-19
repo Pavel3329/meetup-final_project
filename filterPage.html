@@ -19,7 +19,7 @@
     <header class="site-header">
       <div class="header-container">
         <div class="header-left">
-          <a class="site-logo" href="./main.html" aria-label="Meetup home">
+          <a class="site-logo" href="./index.html" aria-label="Meetup home">
             <img
               src="./assets/icons/meetup-logo.svg"
               alt="Meetup"
@@ -80,50 +80,61 @@
               id="filter-form"
               aria-label="Filter events"
             >
-            <label class="filter-controls__item">
-              <span class="visually-hidden">Event type</span>
-              <select id="type-filter" aria-label="Event type">
-                <option value="">Any type</option>
-                <option value="online">Online</option>
-                <option value="offline">Offline</option>
-              </select>
-            </label>
-            <label class="filter-controls__item">
-              <span class="visually-hidden">Maximum distance</span>
-              <select id="distance-filter" aria-label="Maximum distance">
-                <option value="">Any distance</option>
-                <option value="5">5 km</option>
-                <option value="10">10 km</option>
-                <option value="15">15 km</option>
-                <option value="25">25 km</option>
-                <option value="50">50 km</option>
-                <option value="75">75 km</option>
-                <option value="100">100 km</option>
-              </select>
-            </label>
-            <label class="filter-controls__item">
-              <span class="visually-hidden">Category</span>
-              <select id="category-filter" aria-label="Category">
-                <option value="">Any category</option>
-                <option>Social Activities</option>
-                <option>Hobbies and Passions</option>
-                <option>Health and Wellbeing</option>
-                <option>Business</option>
-                <option>Technology</option>
-              </select>
-            </label>
-            <label class="filter-controls__item">
-              <span class="visually-hidden">Day</span>
-              <select id="day-filter" aria-label="Day">
-                <option value="">Any day</option>
-              </select>
-            </label>
+              <label class="filter-controls__item">
+                <span class="visually-hidden">Event type</span>
+                <select id="type-filter" aria-label="Event type">
+                  <option value="">Any type</option>
+                  <option value="online">Online</option>
+                  <option value="offline">Offline</option>
+                </select>
+              </label>
+              <label class="filter-controls__item">
+                <span class="visually-hidden">Maximum distance</span>
+                <select id="distance-filter" aria-label="Maximum distance">
+                  <option value="">Any distance</option>
+                  <option value="5">5 km</option>
+                  <option value="10">10 km</option>
+                  <option value="15">15 km</option>
+                  <option value="25">25 km</option>
+                  <option value="50">50 km</option>
+                  <option value="75">75 km</option>
+                  <option value="100">100 km</option>
+                </select>
+              </label>
+              <label class="filter-controls__item">
+                <span class="visually-hidden">Category</span>
+                <select id="category-filter" aria-label="Category">
+                  <option value="">Any category</option>
+                  <option>Social Activities</option>
+                  <option>Hobbies and Passions</option>
+                  <option>Health and Wellbeing</option>
+                  <option>Business</option>
+                  <option>Technology</option>
+                </select>
+              </label>
+              <label class="filter-controls__item">
+                <span class="visually-hidden">Day</span>
+                <select id="day-filter" aria-label="Day">
+                  <option value="">Any day</option>
+                </select>
+              </label>
             </form>
             <div class="filter-controls-nav" aria-label="Прокрутка фильтров">
-              <button class="filter-controls-nav__button" id="filters-prev" type="button" aria-label="Прокрутить фильтры влево" disabled>
+              <button
+                class="filter-controls-nav__button"
+                id="filters-prev"
+                type="button"
+                aria-label="Прокрутить фильтры влево"
+                disabled
+              >
                 <span aria-hidden="true">‹</span>
               </button>
-              <button class="filter-controls-nav__button" id="filters-next" type="button" aria-label="Прокрутить фильтры вправо">
+              <button
+                class="filter-controls-nav__button"
+                id="filters-next"
+                type="button"
+                aria-label="Прокрутить фильтры вправо"
+              >
                 <span aria-hidden="true">›</span>
               </button>
             </div>
