@@ -74,11 +74,12 @@
         <section class="filter-page__results" aria-labelledby="filter-heading">
           <h1 id="filter-heading">Events near New York, NY</h1>
           <div class="filter-page__tab">Events</div>
-          <form
-            class="filter-controls"
-            id="filter-form"
-            aria-label="Filter events"
-          >
+          <div class="filter-controls-layout">
+            <form
+              class="filter-controls"
+              id="filter-form"
+              aria-label="Filter events"
+            >
             <label class="filter-controls__item">
               <span class="visually-hidden">Event type</span>
               <select id="type-filter" aria-label="Event type">
@@ -117,7 +118,16 @@
                 <option value="">Any day</option>
               </select>
             </label>
-          </form>
+            </form>
+            <div class="filter-controls-nav" aria-label="Прокрутка фильтров">
+              <button class="filter-controls-nav__button" id="filters-prev" type="button" aria-label="Прокрутить фильтры влево" disabled>
+                <span aria-hidden="true">‹</span>
+              </button>
+              <button class="filter-controls-nav__button" id="filters-next" type="button" aria-label="Прокрутить фильтры вправо">
+                <span aria-hidden="true">›</span>
+              </button>
+            </div>
+          </div>
           <div class="filter-page__status">
             <p id="results-count" role="status" aria-live="polite"></p>
             <button id="reset-filters" type="button">Clear filters</button>

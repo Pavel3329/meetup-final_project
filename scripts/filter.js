@@ -99,8 +99,7 @@ function updateEvents() {
   const day = dayFilter.value;
   const distance = distanceFilter.value;
 
-
-  // Для онлайн -мероприятий расстояние не применяется, поэтому блокируем фильтр.
+  // Для онлайн-мероприятий расстояние не применяется, поэтому блокируем фильтр.
   distanceFilter.disabled = type === "online";
   distanceFilter.parentElement.classList.toggle(
     "filter-controls__item--disabled",
@@ -133,3 +132,28 @@ resetButton.addEventListener("click", () => {
 });
 fillDayOptions();
 updateEvents();
+
+
+// Стрелки прокручивают ту же строку, которую можно листать пальцем.
+const filtersRow = document.querySelector("#filter-form");
+const filtersPrev = document.querySelector("#filters-prev");
+const filtersNext = document.querySelector("#filters-next");
+
+function updateScrollButtons() {
+  const maxScroll = filtersRow.scrollWidth - filtersRow.clientWidth;
+  filtersPrev.disabled = filtersRow.scrollLeft <= 1;
+  filtersNext.disabled = filtersRow.scrollLeft >= maxScroll - 1;
+}
+
+function scrollFilters(direction) {
+  filtersRow.scrollBy({
+    left: direction * Math.max(120, filtersRow.clientWidth * 0.65),
+    behavior: "smooth",
+  });
+}
+
+filtersPrev.addEventListener("click", () => scrollFilters(-1));
+filtersNext.addEventListener("click", () => scrollFilters(1));
+filtersRow.addEventListener("scroll", updateScrollButtons, { passive: true });
+window.addEventListener("resize", updateScrollButtons);
+updateScrollButtons();

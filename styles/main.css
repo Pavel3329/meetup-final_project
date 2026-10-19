@@ -231,6 +231,21 @@
   color: #212121;
 }
 
+/* Небольшой подъём выделяет категорию, не меняя расположение соседних карточек. */
+@media (hover: hover) and (pointer: fine) {
+  .category-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .category-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.09);
+  }
+}
+.category-card:focus-visible {
+  outline: 2px solid #00798a;
+  outline-offset: 3px;
+}
+
 .category-card img {
   display: block;
   width: 1.25rem;
@@ -902,7 +917,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero__button {
+  .hero__button,
+  .category-card {
     transition: none;
   }
 }
