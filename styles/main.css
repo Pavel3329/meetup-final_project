@@ -121,7 +121,7 @@
   display: none;
 }
 
-/* Блок приглашения присоединиться к Meetup */
+/* Блок приглашенийя присоединиться к Meetup */
 
 .join-section {
   padding-block: 3.5rem;
@@ -194,7 +194,7 @@
   height: auto;
 }
 
-/* Раздел категорий мероприятий */
+/* Раздел категорий мироприятий */
 
 .categories-section {
   padding-bottom: 4rem;
@@ -231,10 +231,12 @@
   color: #212121;
 }
 
-/* Небольшой подъём выделяет категорию, не меняя расположение соседних карточек. */
+/* Небольшой подъём выделяет категорию, не меняя расположение сосеедних карточек. */
 @media (hover: hover) and (pointer: fine) {
   .category-card {
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
   }
   .category-card:hover {
     transform: translateY(-4px);
@@ -620,7 +622,7 @@
   text-align: center;
 }
 
-/* Адаптивные стили сгруппированы по ширине экрана */
+/* Адаптивные стили сгруппированны по ширине экрана */
 
 @media (max-width: 900px) {
   .events-grid {

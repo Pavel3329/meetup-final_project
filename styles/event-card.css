@@ -63,7 +63,7 @@
   height: 20px;
 }
 
-/* Горизонтальная карточка для списка мероприятий */
+/* Горизонтальная карточка для списка мироприятий */
 .event-card--horizontal {
   display: grid;
   grid-template-columns: 96px minmax(0, 1fr);

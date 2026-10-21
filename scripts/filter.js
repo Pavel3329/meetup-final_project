@@ -47,7 +47,7 @@ function fillDayOptions() {
   });
 }
 
-// Создаём карточку через DOM на основе одного объекта мероприятия.
+// Создаём карточку через DOM на основе одного объекта мироприятия.
 function makeCard(event) {
   const card = document.createElement("article");
   card.className = "event-card event-card--horizontal filter-event-card";
@@ -101,7 +101,7 @@ function updateEvents() {
   const day = dayFilter.value;
   const distance = distanceFilter.value;
 
-  // Для онлайн-мероприятий расстояние не применяется, поэтому блокируем фильтр.
+  // Для онлайн-мироприятий расстояние не применяется, поэтому блокируем фильтр.
   distanceFilter.disabled = type === "online";
   distanceFilter.parentElement.classList.toggle(
     "filter-controls__item--disabled",

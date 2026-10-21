@@ -110,7 +110,7 @@ const onlineEvents = [
   },
 ];
 
-// Создание HTML карточки мероприятия
+// Создание HTML карточки мироприятия
 // Один шаблон карточки используется для двух списков на главной странице.
 function createEventCard(event) {
   return `
@@ -183,7 +183,7 @@ function createEventCard(event) {
   `;
 }
 
-// Вывод карточек мероприятий на главной странице
+// Вывод карточек мироприятий на главной странице
 function renderHomeEvents() {
   const container = document.querySelector("#home-events");
   const moreButton = document.querySelector("#home-events-more");
