@@ -29,6 +29,7 @@ function formatDate(date) {
   }).format(date);
 }
 
+// Собираем уникальные дни из данных, чтобы не прописывать даты вручную в HTML.
 function fillDayOptions() {
   const days = [
     ...new Set(eventsStore.map((event) => dateKey(event.date))),
@@ -46,6 +47,7 @@ function fillDayOptions() {
   });
 }
 
+// Создаём карточку через DOM на основе одного объекта мероприятия.
 function makeCard(event) {
   const card = document.createElement("article");
   card.className = "event-card event-card--horizontal filter-event-card";
@@ -117,6 +119,7 @@ function updateEvents() {
     return true;
   });
 
+  // Заменяем старые карточки новыми и синхронизируем счётчик результатов.
   eventList.replaceChildren(...filtered.map(makeCard));
   resultsCount.textContent = `${filtered.length} ${filtered.length === 1 ? "event" : "events"} found`;
   emptyMessage.hidden = filtered.length !== 0;
@@ -139,6 +142,7 @@ const filtersRow = document.querySelector("#filter-form");
 const filtersPrev = document.querySelector("#filters-prev");
 const filtersNext = document.querySelector("#filters-next");
 
+// Отключаем стрелки на границах прокрутки.
 function updateScrollButtons() {
   const maxScroll = filtersRow.scrollWidth - filtersRow.clientWidth;
   filtersPrev.disabled = filtersRow.scrollLeft <= 1;

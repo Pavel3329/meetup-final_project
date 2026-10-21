@@ -1,3 +1,4 @@
+/* Общие переменные: цвета и максимальная ширина контента. */
 :root {
   --color-text: #212121;
   --color-primary: #00798a;
@@ -5,6 +6,7 @@
   --container-width: 1196px;
 }
 
+/* Сброс стандартных отступов и удобный расчёт размеров элементов. */
 *,
 *::before,
 *::after {
@@ -42,6 +44,7 @@ select {
   font: inherit;
 }
 
+/* Контейнер с ограничением ширины и гибкими боковыми полями. */
 .container {
   width: min(100% - 2rem, var(--container-width));
   margin-inline: auto;

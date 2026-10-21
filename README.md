@@ -62,7 +62,7 @@ HTML5, CSS3 (Flexbox, Grid, media queries), JavaScript (DOM, массивы, `fi
 
 ## Статус
 
-Обе страницы реализованы. Продолжается финальная проверка адаптивности, доступности и соответствия макету.
+Обе страницы реализованы. Адаптивность проверена вручную на разных ширинах экрана. Поиск и карта остаются демонстрационными элементами.
 
 ---
 
@@ -91,4 +91,4 @@ Open the project in VS Code and launch `index.html` with **Live Server**. Select
 
 ### Design and status
 
-[Figma design](https://www.figma.com/design/dWkhtgag438U7CW15rtFxx/Front-end-project--Copy-?node-id=0-1). Both pages are implemented; final responsive, accessibility, and visual checks remain in progress. Screenshots will be added to `docs/screenshots/` after the final review.
+[Figma design](https://www.figma.com/design/dWkhtgag438U7CW15rtFxx/Front-end-project--Copy-?node-id=0-1). Both pages are implemented. Responsive behavior has been manually checked at multiple widths. Search and the map remain demonstration-only elements. Four screenshots are included above.

@@ -111,6 +111,7 @@ const onlineEvents = [
 ];
 
 // Создание HTML карточки мероприятия
+// Один шаблон карточки используется для двух списков на главной странице.
 function createEventCard(event) {
   return `
   <article class="event-card">
@@ -202,7 +203,8 @@ function renderHomeEvents() {
   moreButton.textContent = `Show ${hiddenCount} more events`;
 
   moreButton.addEventListener("click", () => {
-    const isExpanded = container.classList.toggle("events-grid--expanded");
+    // Переключаем CSS-класс вместо повторного создания карточек.
+  const isExpanded = container.classList.toggle("events-grid--expanded");
 
     moreButton.setAttribute("aria-expanded", String(isExpanded));
 
