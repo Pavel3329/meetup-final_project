@@ -12,23 +12,30 @@
 - При выборе **Online** фильтр расстояния становится недоступным; прежний выбор сохраняется и снова применяется после смены типа.
 - Сброс фильтров, количество найденных мероприятий и сообщение при отсутствии результатов.
 - Адаптивная вёрстка, локальные SVG-иконки и статическая карта из макета.
+- На мобильных экранах — горизонтальная прокрутка фильтров свайпом и стрелками; карточки категорий подсвечиваются при наведении мышью.
 
 ## Технологии
 
 HTML5, CSS3 (Flexbox, Grid, media queries), JavaScript (DOM, массивы, `filter()`, обработчики событий), Git и GitHub.
 
+## Опубликованная версия
+
+[Открыть сайт на GitHub Pages](https://pavel3329.github.io/meetup-final_project/)
+
 ## Запуск
 
 1. Откройте папку проекта в VS Code.
-2. Запустите `main.html` через расширение **Live Server**.
+2. Запустите `index.html` через расширение **Live Server**.
 3. Перейдите на страницу мероприятий кнопкой **Join Meetup**.
 
-Установка пакетов не требуется. Для загрузки изображений мероприятий необходимо интернет-соединение.
+Также можно открыть `index.html` напрямую в браузере.
+
+Установка пакетов не требуется. Для загрузки изображений шести мероприятий на странице фильтрации необходимо интернет-соединение.
 
 ## Структура
 
 ```text
-├── main.html                 # Главная страница
+├── index.html                 # Главная страница
 ├── filterPage.html           # Страница фильтрации
 ├── styles/
 │   ├── common.css            # Общие стили и навигация
@@ -48,7 +55,10 @@ HTML5, CSS3 (Flexbox, Grid, media queries), JavaScript (DOM, массивы, `fi
 
 [Figma — Front-end project](https://www.figma.com/design/dWkhtgag438U7CW15rtFxx/Front-end-project--Copy-?node-id=0-1)
 
-Скриншоты готовых страниц можно добавить в `docs/screenshots/` после финальной визуальной проверки. В README их следует подключать относительными ссылками, например `![Главная страница](docs/screenshots/home-desktop.png)`.
+![Главная страница — десктоп](docs/screenshots/home-desktop.png)
+![Фильтры — десктоп](docs/screenshots/filters-desktop.png)
+![Главная страница — мобильная версия](docs/screenshots/home-mobile.png)
+![Фильтры — мобильная версия](docs/screenshots/filters-mobile.png)
 
 ## Статус
 
@@ -65,16 +75,20 @@ A responsive two-page Meetup-inspired website built for a frontend course final 
 - Responsive homepage with events, categories, cities, and editorial sections.
 - Events page rendering six assignment-provided objects with combined filters for **type, category, maximum distance, and date**.
 - Distance filtering is disabled for online events; the previous distance selection is preserved when switching back.
-- Reset button, result count, empty-state message, and a static map preview from Figma.
+- Reset button, result count, empty-state message, a static map preview, and horizontal mobile filter scrolling with touch and arrow controls.
+
+### Live demo
+
+[Open the site on GitHub Pages](https://pavel3329.github.io/meetup-final_project/)
 
 ### Run locally
 
-Open the project in VS Code and launch `main.html` with **Live Server**. Select **Join Meetup** to navigate to the events page. An internet connection is needed for externally hosted event images.
+Open the project in VS Code and launch `index.html` with **Live Server**. Select **Join Meetup** to navigate to the events page. An internet connection is needed for the six externally hosted images on the filter page.
 
 ### Project files
 
-`main.html` and `filterPage.html` are the two pages; `styles/` contains shared and page-specific CSS; `scripts/homeEvents.js` handles homepage cards, `scripts/eventsData.js` stores the six events, and `scripts/filter.js` renders and filters the events list. Assets are stored in `assets/`.
+`index.html` and `filterPage.html` are the two pages; `styles/` contains shared and page-specific CSS; `scripts/homeEvents.js` handles homepage cards, `scripts/eventsData.js` stores the six events, and `scripts/filter.js` renders and filters the events list. Assets are stored in `assets/`.
 
 ### Design and status
 
-[Figma design](https://www.figma.com/design/dWkhtgag438U7CW15rtFxx/Front-end-project--Copy-?node-id=0-1). Both pages are implemented; final responsive, accessibility, and visual checks remain in progress. Screenshots can be added after the final review.
+[Figma design](https://www.figma.com/design/dWkhtgag438U7CW15rtFxx/Front-end-project--Copy-?node-id=0-1). Both pages are implemented; final responsive, accessibility, and visual checks remain in progress. Screenshots will be added to `docs/screenshots/` after the final review.
