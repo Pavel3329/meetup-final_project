@@ -1,9 +1,9 @@
-
 /* Расположение фильтров списка мероприятий и карты второй страницы. */
 
 .filter-page {
   padding: 77px 0 64px;
 }
+
 .filter-page__layout {
   width: min(100% - 2rem, 1196px);
   margin-inline: auto;
@@ -12,6 +12,7 @@
   justify-content: space-between;
   gap: 48px;
 }
+
 .filter-page__results h1 {
   font-size: 28px;
   line-height: 36px;
@@ -263,7 +264,9 @@
     border-radius: 8px;
     background: #fff;
     color: #00798a;
-    font: 26px/1 Arial, sans-serif;
+    font:
+      26px/1 Arial,
+      sans-serif;
     cursor: pointer;
   }
   .filter-controls-nav__button:disabled {

@@ -15,6 +15,7 @@
   box-sizing: border-box;
 }
 
+/* базовые (глобальные) стили */
 html {
   font-size: 16px;
 }

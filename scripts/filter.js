@@ -1,4 +1,3 @@
-
 "use strict";
 
 const typeFilter = document.querySelector("#type-filter");
@@ -18,6 +17,7 @@ function dateKey(date) {
   return `${year}-${month}-${day}`;
 }
 
+// Подготавливает дату для отображения
 function formatDate(date) {
   return new Intl.DateTimeFormat("en-US", {
     weekday: "short",
@@ -129,13 +129,13 @@ function updateEvents() {
 [typeFilter, distanceFilter, categoryFilter, dayFilter].forEach((filter) => {
   filter.addEventListener("change", updateEvents);
 });
+// Сбрасывает форму и обновляет список
 resetButton.addEventListener("click", () => {
   document.querySelector("#filter-form").reset();
   updateEvents();
 });
 fillDayOptions();
 updateEvents();
-
 
 // Стрелки прокручивают ту же строку, которую можно листать пальцем.
 const filtersRow = document.querySelector("#filter-form");
